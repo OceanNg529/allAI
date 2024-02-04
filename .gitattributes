@@ -1,3 +1,1 @@
-/Users/ocean/Git/allAI/allAI-1.0.0-mac.zip filter=lfs diff=lfs merge=lfs -text
-/Users/ocean/Git/allAI/allAI-1.0.0-win32.zip filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
