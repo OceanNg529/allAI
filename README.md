@@ -10,6 +10,6 @@ B 站: https://b23.tv/LIw7a3X
 
 wechat 交流群:
 
-![IMG_2275](https://github.com/OceanNg529/allAI/assets/49863683/0b779afd-cd8b-414a-8949-2c001b1ecf67)
+<img src="https://github.com/OceanNg529/allAI/assets/49863683/0b779afd-cd8b-414a-8949-2c001b1ecf67" width="33.333333%">
 
 
