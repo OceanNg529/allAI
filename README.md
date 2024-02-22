@@ -12,4 +12,4 @@
 <p>https://v.douyin.com/iNxkWWFt/ Ivs:/ 12/20 s@r.Rk</p>
 
 <h2>微信交流群</h2>
-<img src="https://github.com/OceanNg529/allAI/assets/49863683/d3909cef-2cbb-448a-8459-d01144355d28" width="33.33%">
+<img src="https://github.com/OceanNg529/allAI/assets/49863683/54eb7b74-6295-44bd-9519-b003996e2f08" width="33.33%">
