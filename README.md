@@ -11,9 +11,9 @@
 <p>使用教程：视频 复制 抖音打开</p>
 <p>https://v.douyin.com/iNxkWWFt/ Ivs:/ 12/20 s@r.Rk</p>
 
-<h2>微信交流群</h2>
-<img src="https://github.com/OceanNg529/allAI/assets/49863683/54eb7b74-6295-44bd-9519-b003996e2f08" width="33.33%">
+<h2>赞赏，请作者喝奶茶</h2>
 
+<img src="https://github.com/OceanNg529/allAI/assets/49863683/a6bd67da-d1fe-4c2e-9498-5118b06b04a6" width="33.33%">
 
 
 
