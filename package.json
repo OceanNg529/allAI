@@ -1,0 +1,124 @@
+{
+  "name": "allAI",
+  "version": "1.9.8",
+  "description": "allAI",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "./node_modules/.bin/electron-builder --dir",
+    "dist": "npm run monkeypatch && export SNAPCRAFT_BUILD_ENVIRONMENT=host && export SNAP_DESTRUCTIVE_MODE='true' && ./node_modules/.bin/electron-builder -mw && npm run zip",
+    "zip": "node script/zip",
+    "monkeypatch": "cp temp/yarn.js node_modules/app-builder-lib/out/util/yarn.js && cp temp/rebuild.js node_modules/@electron/rebuild/lib/src/rebuild.js",
+    "postinstall": "npm run monkeypatch && ./node_modules/.bin/electron-builder install-app-deps",
+    "release": "cross-env GH_TOKEN=xxxxx electron-builder -mw"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OceanNg529/allAI.git"
+  },
+  "build": {
+    "appId": "allAI",
+    "publish": [
+      "github"
+    ],
+    "asarUnpack": [
+      "node_modules/7zip-bin/**/*",
+      "node_modules/node-pty-prebuilt-multiarch-cp/**/*"
+    ],
+    "extraResources": [
+      "./script/**"
+    ],
+    "protocols": [
+      {
+        "name": "allAI",
+        "schemes": [
+          "allAI"
+        ]
+      }
+    ],
+    "dmg": {
+      "background": "./assets/background.png",
+      "contents": [
+        {
+          "x": 130,
+          "y": 250
+        },
+        {
+          "x": 410,
+          "y": 80,
+          "type": "file",
+          "path": "./script/patch.command"
+        },
+        {
+          "x": 410,
+          "y": 250,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "mac": {
+      "category": "utility",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "maintainer": "OceanNg529",
+      "target": [
+        {
+          "target": "deb",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        },
+        {
+          "target": "rpm",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        },
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  },
+  "license": "MIT",
+  "dependencies": {
+    "electron-store": "^8.1.0",
+    "electron-updater": "^6.1.8",
+    "electron-window-state": "^5.0.3",
+    "global-agent": "^3.0.0",
+    "https-proxy-agent": "^7.0.2",
+    "allai": "^1.9.5"
+  },
+  "devDependencies": {
+    "@electron/rebuild": "3.2.10",
+    "cross-env": "^7.0.3",
+    "electron": "^23.3.13",
+    "electron-builder": "^24.0.0"
+  }
+}

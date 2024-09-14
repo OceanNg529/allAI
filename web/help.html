@@ -1,0 +1,16 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<body style="margin:0;padding:0">
+<div style="display: flex;align-items: center;justify-content: center;">
+    <img src="http://ai360.buzz/allAI/images/help.jpg" width="300" height="300">
+</div>
+</body>
+<script>
+window.onload = function() {
+  // 确保页面完全加载后再发送消息
+  parent.postMessage({ 'frameHeight': 300 }, '*');
+};
+</script>
+</html>
